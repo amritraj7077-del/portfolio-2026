@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background text-slate-50;
+}
+
+.section-card {
+  @apply rounded-2xl border border-slate-700/60 bg-gradient-to-br from-violet-900/30 via-slate-900/80 to-slate-950/90 p-5 sm:p-6;
+}
+
+.section-label {
+  @apply text-xs tracking-[0.18em] uppercase text-slate-400 mb-1;
+}
+
+.section-title {
+  @apply text-sm font-semibold text-slate-100;
+}
+
+.section-subtext {
+  @apply text-xs text-slate-400;
+}
