@@ -6,20 +6,18 @@ interface WorkflowProps {
 
 export function Workflow({ steps }: WorkflowProps) {
   return (
-    <section className="section-card" id="workflow">
-      <header className="flex items-center justify-between mb-3">
-        <div>
-          <div className="section-label">Process</div>
-          <div className="section-title">Development Workflow</div>
-        </div>
+    <section className="section-card h-full" id="workflow">
+      <header className="mb-10">
+        <div className="section-label">Pipeline</div>
+        <h2 className="text-xl font-bold text-white uppercase tracking-tight">Development Lifecycle</h2>
       </header>
-      <ol className="mt-1 space-y-2 text-xs text-slate-300">
+      <ol className="space-y-6">
         {steps.map((step, idx) => (
-          <li key={step} className="flex items-start gap-2">
-            <span className="mt-[3px] inline-flex h-4 w-4 items-center justify-center rounded-full border border-slate-600 text-[10px] text-slate-300">
+          <li key={step} className="flex items-start gap-4">
+            <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-sm bg-white text-black text-[10px] font-black">
               {idx + 1}
             </span>
-            <span>{step}</span>
+            <span className="text-sm sm:text-base text-slate-400 font-medium group-hover:text-white transition-colors">{step}</span>
           </li>
         ))}
       </ol>

@@ -6,21 +6,19 @@ interface ServicesProps {
 
 export function Services({ services }: ServicesProps) {
   return (
-    <section className="section-card" id="services">
-      <header className="flex items-center justify-between mb-3">
-        <div>
-          <div className="section-label">What I Do</div>
-          <div className="section-title">Services</div>
-        </div>
+    <section className="section-card h-full" id="services">
+      <header className="mb-10">
+        <div className="section-label">Offerings</div>
+        <h2 className="text-xl font-bold text-white uppercase tracking-tight">Technical Services</h2>
       </header>
-      <div className="grid gap-3 sm:grid-cols-2 text-xs text-slate-200">
+      <div className="grid gap-6 sm:grid-cols-2">
         {services.map((service) => (
           <div
             key={service.title}
-            className="rounded-2xl border border-slate-700/70 bg-slate-950/70 p-3"
+            className="group rounded-2xl border border-[#1f1f1f] bg-[#0a0a0a]/50 p-6 transition-all duration-300 hover:border-white"
           >
-            <div className="font-semibold mb-1">{service.title}</div>
-            <p className="text-[11px] text-slate-300 leading-relaxed">
+            <div className="font-bold text-white mb-3 tracking-tight transition-colors">{service.title}</div>
+            <p className="text-[14px] text-slate-400 leading-relaxed font-semibold">
               {service.description}
             </p>
           </div>

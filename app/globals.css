@@ -6,22 +6,71 @@
   color-scheme: dark;
 }
 
+html {
+  scroll-behavior: smooth;
+  @apply bg-[#0a0a0a];
+}
+
 body {
-  @apply bg-background text-slate-50;
+  @apply bg-[#0a0a0a] text-slate-400 font-sans antialiased selection:bg-white selection:text-black;
 }
 
+/* Premium Card Style - Ambient Shadow Formula */
 .section-card {
-  @apply rounded-2xl border border-slate-700/60 bg-gradient-to-br from-violet-900/30 via-slate-900/80 to-slate-950/90 p-5 sm:p-6;
+  @apply rounded-xl border border-[#1f1f1f] bg-[#111111] p-8 sm:p-12 transition-all duration-500;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
+.section-card:hover {
+  @apply -translate-y-1 border-[#333333];
+  box-shadow: 
+    0 20px 40px -15px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* High-Fidelity Typography */
 .section-label {
-  @apply text-xs tracking-[0.18em] uppercase text-slate-400 mb-1;
+  @apply text-[10px] tracking-[0.4em] uppercase text-slate-600 font-black mb-6 opacity-0 animate-slide-down;
 }
 
 .section-title {
-  @apply text-sm font-semibold text-slate-100;
+  @apply text-4xl sm:text-6xl font-bold text-white tracking-tighter opacity-0 animate-slide-down delay-100 leading-[1.05] mb-16;
 }
 
-.section-subtext {
-  @apply text-xs text-slate-400;
+/* Redesigned Button System - Ease In Out Invert */
+.btn-outline {
+  @apply px-10 py-4 rounded-full border border-[#333] text-white font-bold transition-all duration-500 hover:bg-white hover:text-black hover:scale-105;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.btn-solid {
+  @apply px-10 py-4 rounded-full bg-white text-black font-bold border border-white transition-all duration-500 hover:bg-transparent hover:text-white hover:scale-105;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Minimalist Range Slider */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  @apply bg-white cursor-pointer transition-all duration-300 border-[3px] border-[#111];
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  @apply scale-150;
+}
+
+/* Interactive Grayscale */
+.grayscale-interaction {
+  @apply grayscale opacity-40 transition-all duration-700 ease-in-out hover:grayscale-0 hover:opacity-100;
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }

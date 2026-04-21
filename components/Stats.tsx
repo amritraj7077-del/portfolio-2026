@@ -7,33 +7,33 @@ interface StatsProps {
 export function Stats({ stats }: StatsProps) {
   const items = [
     { label: 'Public Repos', value: stats.publicRepos },
-    { label: 'Approx. Commits', value: stats.totalCommits },
+    { label: 'Total Commits', value: stats.totalCommits },
     { label: 'Hackathons', value: stats.hackathons },
     { label: 'Stars', value: stats.stars },
     { label: 'Forks', value: stats.forks },
   ];
 
   return (
-    <section className="section-card" id="stats">
-      <header className="flex items-center justify-between mb-3">
-        <div>
-          <div className="section-label">Stats</div>
-          <div className="section-title">GitHub Activity</div>
-        </div>
+    <section className="section-card h-full" id="stats">
+      <header className="mb-10">
+        <div className="section-label">Performance Core</div>
+        <h2 className="text-xl font-bold text-white uppercase tracking-tight">Technical Activity</h2>
       </header>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-slate-200">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
         {items.map((item) => (
-          <div key={item.label} className="rounded-xl border border-slate-700/70 bg-slate-900/70 px-3 py-2">
-            <div className="text-[10px] uppercase tracking-wide text-slate-400">
+          <div key={item.label} className="space-y-1">
+            <div className="text-[10px] font-bold uppercase tracking-[2px] text-slate-400">
               {item.label}
             </div>
-            <div className="text-base font-semibold">{item.value}</div>
+            <div className="text-2xl font-black text-white">{item.value}</div>
           </div>
         ))}
       </div>
-      <p className="mt-3 text-[11px] text-slate-400">
-        Top languages: {stats.topLanguages.join(', ')}. {/* Amrit: you can embed a real GitHub stats image below later. */}
-      </p>
+      <div className="mt-12 pt-8 border-t border-[#1f1f1f]">
+        <p className="text-[10px] font-black uppercase tracking-[2px] text-slate-500">
+          Core Languages: <span className="text-white ml-2">{stats.topLanguages.join(' | ')}</span>
+        </p>
+      </div>
     </section>
   );
 }
