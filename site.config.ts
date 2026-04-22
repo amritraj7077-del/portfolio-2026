@@ -23,8 +23,8 @@ export const siteConfig = {
     },
     {
       icon: "🎓",
-      title: "IIT Madras Student",
-      text: "BS Program, Foundation Level (Roll: 25F3005722)",
+      title: "IIT Madras",
+      text: "(Roll: 25F3005722)",
       tag: "2026 - Present",
     },
     {
@@ -117,31 +117,31 @@ export const siteConfig = {
         'Picked up Python to build problem‑solving skills and strengthen core programming fundamentals.',
     },
     {
-      date: 'Oct 2026',
+      date: 'Jan 2026',
       title: 'First Mini Projects',
       description:
         'Built small web projects and simple apps, and started focusing on clean UI, UX, and responsive design.',
     },
     {
-      date: 'Sep 2026',
+      date: 'Jan 2026',
       title: 'First Hackathon Experience',
       description:
         'Entered hackathons and built the Bharat Education Portal, an educational platform with AI‑based tools and student resources.',
     },
     {
-      date: 'Sep 2026',
+      date: 'Feb 2026',
       title: 'Bharat Education Portal Launched',
       description:
         'Designed and deployed a functional educational portal with multiple features and a modern UI.',
     },
     {
-      date: 'Oct 2026',
+      date: 'Feb 2026',
       title: 'Portfolio Website Launched',
       description:
         'Built and deployed a modern, responsive portfolio to showcase skills, projects, and achievements.',
     },
     {
-      date: 'Late 2026',
+      date: '2026',
       title: 'Deepening Full‑Stack & AI/ML',
       description:
         'Learning advanced frameworks like React, Next.js, and Node.js, and exploring AI/ML tools to build smarter, more powerful applications.',

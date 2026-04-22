@@ -15,7 +15,7 @@ export function Research({ research }: ResearchProps) {
   return (
     <section id="research" className="py-8">
       <header className="mb-16">
-        <div className="section-label">Foundation</div>
+        <div className="section-label">Exploration</div>
         <h2 className="section-title">RESEARCH & PUBLICATIONS</h2>
       </header>
 
