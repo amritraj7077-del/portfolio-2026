@@ -70,7 +70,6 @@ export const siteConfig = {
     { name: "Next.js", icon: "▲", level: 82, category: "Frontend" },
     { name: "Tailwind CSS", icon: "🎨", level: 90, category: "Frontend" },
     { name: "Responsive Design", icon: "📱", level: 92, category: "Frontend" },
-    { name: "Material-UI", icon: "🎭", level: 80, category: "Frontend" },
 
     { name: "Node.js", icon: "🟢", level: 85, category: "Backend" },
     { name: "Express.js", icon: "⚡", level: 85, category: "Backend" },
@@ -91,17 +90,14 @@ export const siteConfig = {
     { name: "Autonomous Systems", icon: "🤖", level: 85, category: "ML/AI" },
 
     { name: "Drone Navigation", icon: "🚁", level: 88, category: "Drone Tech" },
-    { name: "SLAM & VIO", icon: "🗺️", level: 85, category: "Drone Tech" },
     { name: "AI Threat Detection", icon: "🎯", level: 82, category: "Drone Tech" },
     { name: "Sensor Integration", icon: "📡", level: 83, category: "Drone Tech" },
-    { name: "Encryption (AES-256)", icon: "🔒", level: 80, category: "Drone Tech" },
 
     { name: "Git & GitHub", icon: "🐙", level: 92, category: "Tools" },
     { name: "Docker", icon: "🐳", level: 85, category: "Tools" },
     { name: "AWS & Cloud", icon: "☁️", level: 80, category: "Tools" },
     { name: "VS Code", icon: "💻", level: 94, category: "Tools" },
     { name: "Jupyter Notebooks", icon: "📓", level: 86, category: "Tools" },
-    { name: "Linux", icon: "🐧", level: 82, category: "Tools" },
   ],
   journey: [
     {

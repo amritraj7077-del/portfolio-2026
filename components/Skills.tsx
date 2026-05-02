@@ -61,9 +61,6 @@ function BookOpen(props: any) {
 
 export function Skills({ skills: initialSkills }: SkillsProps) {
   const [activeTab, setActiveTab] = useState('All');
-  const [proficiency, setProficiency] = useState<{ [key: string]: number }>(
-    Object.fromEntries(initialSkills.map(s => [s.name, s.level]))
-  );
 
   const categories = useMemo(() => {
     const cats = ['All', ...new Set(initialSkills.map(s => s.category))];
@@ -74,13 +71,6 @@ export function Skills({ skills: initialSkills }: SkillsProps) {
     if (activeTab === 'All') return initialSkills;
     return initialSkills.filter(s => s.category === activeTab);
   }, [activeTab, initialSkills]);
-
-  const handleSliderChange = (name: string, value: string) => {
-    setProficiency(prev => ({
-      ...prev,
-      [name]: parseInt(value)
-    }));
-  };
 
   return (
     <section id="skills" className="py-8">
@@ -107,54 +97,22 @@ export function Skills({ skills: initialSkills }: SkillsProps) {
       </header>
 
       {/* Skills Grid - Professional Clean Style */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filteredSkills.map((skill) => {
-          const currentLevel = proficiency[skill.name];
           const SkillIcon = iconMap[skill.icon] || Code2;
           
           return (
             <div
               key={skill.name}
-              className="group section-card !p-8"
+              className="group section-card !p-6"
             >
-              <div className="relative z-10 space-y-6">
-                {/* Header: Icon + Name + % */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="grayscale-interaction">
-                      <SkillIcon size={24} strokeWidth={1.5} className="text-white" />
-                    </div>
-                    <h3 className="text-[12px] font-bold text-white uppercase tracking-tight">
-                      {skill.name}
-                    </h3>
-                  </div>
-                  <span className="text-sm font-bold text-white">
-                    {currentLevel}%
-                  </span>
+              <div className="flex items-center gap-4">
+                <div className="grayscale-interaction">
+                  <SkillIcon size={24} strokeWidth={1.5} className="text-white" />
                 </div>
-
-                {/* Monochromatic Progress Bar */}
-                <div className="relative h-1 w-full bg-[#1f1f1f] rounded-full overflow-hidden">
-                  <div
-                    className="absolute inset-y-0 left-0 bg-white transition-all duration-700 ease-out"
-                    style={{ width: `${currentLevel}%` }}
-                  />
-                </div>
-
-                {/* Minimal Slider Interaction */}
-                <div className="space-y-4">
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={currentLevel}
-                    onChange={(e) => handleSliderChange(skill.name, e.target.value)}
-                    className="w-full h-1 bg-[#1f1f1f] rounded-lg appearance-none cursor-pointer accent-white opacity-0 group-hover:opacity-100 transition-opacity"
-                  />
-                  <p className="text-[9px] text-slate-400 font-bold uppercase tracking-[2px] opacity-0 group-hover:opacity-100 transition-opacity">
-                    Adjust Metric
-                  </p>
-                </div>
+                <h3 className="text-[12px] font-bold text-white uppercase tracking-tight">
+                  {skill.name}
+                </h3>
               </div>
             </div>
           );
